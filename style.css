@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.color {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  margin: 15px;
+  padding: 5px;
+}
+
+.block {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  box-shadow: 
+    0 0 1px 12px rgb(255, 255, 255),
+    0 0 3px 12px rgba(0,0,0,0.2);
+}
+
+.label {
+  padding: 4px; 
+
+  background-color: #f7f7f7;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  text-align: center;
+}

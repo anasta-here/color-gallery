@@ -1,2 +1,4 @@
-# color-gallery
-This repository contains the starter files for the Color Gallery project.
+# Color Gallery
+
+## Objective
+Use JavaScript to dynamically create a color gallery. 

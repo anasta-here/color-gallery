@@ -43,3 +43,5 @@ function buildGallery (colors) {
 }
 
 buildGallery(colors)
+
+const hues = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']

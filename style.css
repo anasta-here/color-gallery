@@ -12,6 +12,14 @@ h1 {
   justify-content: center;
 }
 
+.title {
+  margin-top: 2rem;
+
+  font-weight: normal;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 .color {
   display: grid;
   justify-content: center;

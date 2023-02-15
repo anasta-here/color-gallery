@@ -32,16 +32,41 @@ function createColor (name, hex) {
 }
 
 function buildGallery (colors) {
-  const $gallery = document.getElementById('gallery')
-  const $fragment = document.createDocumentFragment()
+  const $gallery = document.createElement('div')
+  $gallery.classList.add('gallery')
 
-  for (const color in colors) {
-    $fragment.append(createColor(color, colors[color]))
+  for (const color of colors) {
+    $gallery.append(createColor(color.name, color.hex))
   }
 
-  $gallery.append($fragment)
+  return $gallery
 }
 
-buildGallery(colors)
+function buildTitle (text) {
+  const $title = document.createElement('h2')
+  $title.classList.add('title')
+  $title.textContent = text
+
+  return $title
+}
+
+function buildGalleries (colors, hues) {
+  const $galleries = document.getElementById('galleries')
+  const $fragment = document.createDocumentFragment()
+
+  const colorsArray = Object.keys(colors).map(color => {
+    return { name: color, hex: colors[color] }
+  })
+
+  for (const hue of hues) {
+    const colors = colorsArray.filter(color => color.name.includes(hue))
+
+    $fragment.append(buildTitle(hue), buildGallery(colors))
+  }
+
+  $galleries.append($fragment)
+}
 
 const hues = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+
+buildGalleries(colors, hues)

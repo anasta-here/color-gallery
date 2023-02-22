@@ -1,0 +1,27 @@
+.block {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.label {
+    padding: 4px;
+    background-color: whitesmoke;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.color {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    margin: 15px;
+    padding: 5px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
